@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  --primary-color: #ff6b6b;
+  --bg-color: #1e1e2f;
+  --text-color: #dddddd;
+  --text-muted: #aaa;
+  --white: #ffffff;
+}
+
+.footer {
+  background: var(--bg-color);
+  color: var(--text-color);
+  padding: 60px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 22px;
+}
+
+.footer-col p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 12px;
+}
+
+.footer-col p svg {
+  margin-right: 10px;
+  color: var(--primary-color);
+  vertical-align: middle;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Mobile Design */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 15px 20px;
+  }
+
+  .footer-col h3,
+  .footer-col h4 {
+    font-size: 20px;
+  }
+
+  .footer-col p {
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+  }
+}

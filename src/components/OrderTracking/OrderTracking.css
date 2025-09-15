@@ -1,0 +1,156 @@
+/* src/components/OrderTracking/OrderTracking.css */
+
+.tracking-page {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Card for each order */
+.tracking-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Order items and total */
+.tracking-card p {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* Cancel button */
+.cancel-btn {
+  background: #ff4d4f;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  transition: background 0.3s;
+}
+
+.cancel-btn:hover:not(:disabled) {
+  background: #e60000;
+}
+
+.cancel-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Tracker stages container */
+.tracking-stages {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+  position: relative;
+}
+
+/* Each stage */
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+  text-align: center;
+}
+
+/* Circle */
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ddd;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.circle.active {
+  background: #4caf50; /* Green for active stage */
+}
+
+/* Stage text */
+.stage p {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #888;
+}
+
+.stage p.active {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+/* Line between stages */
+.line {
+  position: absolute;
+  top: 15px; /* middle of the circle */
+  left: 50%;
+  height: 4px;
+  width: 100%;
+  background: #ddd;
+  z-index: 0;
+  transform: translateX(50%);
+}
+
+.line.active {
+  background: #4caf50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .tracking-stages {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stage {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .line {
+    width: 4px;
+    height: 50px;
+    top: 30px;
+    left: 15px;
+    transform: translateX(0);
+  }
+}
+@media (max-width: 480px) {
+  h2{
+    padding-top: 40px;
+  }
+  .tracking-stages {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .stage {
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  .line {
+    width: 4px;
+    height: 50px;
+    top: 30px;
+    left: 15px;
+    transform: translateX(0);
+  }
+}
+

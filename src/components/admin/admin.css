@@ -1,0 +1,130 @@
+.admin-panel {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f6fa;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Notification Cards */
+.notifications .notification-card {
+  background: linear-gradient(135deg, #f093fb, #f5576c);
+  color: #fff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 100%, 0 85%);
+}
+
+.card-buttons button {
+  margin-right: 10px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.card-buttons .accept { background: #27ae60; color: #fff; }
+.card-buttons .reject { background: #c0392b; color: #fff; }
+
+.card-buttons .action-btn { 
+  background: #2980b9; 
+  color: #fff; 
+  width: 100%; 
+  margin-top: 10px; 
+}
+
+/* Desktop Table */
+.desktop-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.desktop-table th, .desktop-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.desktop-table th {
+  background: #2980b9;
+  color: #fff;
+}
+
+/* Mobile Cards */
+.mobile-cards {
+  display: none;
+}
+
+.mobile-cards .order-card {
+  background: linear-gradient(134444deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+
+
+}
+
+.order-card p {
+  margin: 5px 0;
+}
+
+.order-id {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .desktop-table { display: none; }
+  .mobile-cards { display: block; }
+}
+/* Status Badges */
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+}
+
+.badge.received { background: #007bff; }      /* Blue */
+.badge.preparing { background: #ff9800; }     /* Orange */
+.badge.delivery { background: #673ab7; }      /* Purple */
+.badge.delivered { background: #4caf50; }     /* Green */
+.badge.rejected { background: #f44336; }      /* Red */
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.badge.received { background: #007bff; }   /* Blue */
+.badge.preparing { background: #ff9800; }  /* Orange */
+.badge.delivery { background: #9c27b0; }   /* Purple */
+.badge.delivered { background: #4caf50; }  /* Green */
+.badge.rejected { background: #f44336; }   /* Red */
+.badge.cancelled { background: #607d8b; }  /* Gray */
+
+/* 🔴 Blinking effect for new orders */
+.blink {
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  50% { opacity: 0.5; }
+}

@@ -1,0 +1,67 @@
+.dashboard {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 200px;
+  max-width: 200px;
+  padding: 20px;
+  border-radius: 24px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+.card h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+}
+
+.card.orders {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+.card.pending {
+  background: linear-gradient(135deg, #ffb347, #ffcc33);
+}
+
+.card.delivered {
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+}
+
+.card.menu {
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+}
+
+.card.users {
+  background: linear-gradient(135deg, #f7971e, #ffd200);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .cards-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

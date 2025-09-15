@@ -1,0 +1,151 @@
+/* ===== CART PAGE STYLES ===== */
+.cart-page {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Heading */
+.cart-page h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #222;
+}
+
+/* ===== CART ITEMS ===== */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+}
+
+.cart-item:hover {
+  background: #f9f9f9;
+}
+
+.cart-item img {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.cart-item div {
+  font-size: 16px;
+  font-weight: 500;
+  color: #444;
+}
+
+/* ===== TOTAL & FORM ===== */
+.cart-page h3 {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  text-align: right;
+}
+
+.cart-page input {
+  width: 100%;
+  padding: 12px 14px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cart-page input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 6px rgba(79,70,229,0.3);
+}
+
+/* ===== BUTTONS ===== */
+.cart-page button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cart-page button:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.cart-page button:not(:disabled) {
+  background: linear-gradient(135deg, #4f46e5, #6d28d9);
+  color: white;
+}
+
+.cart-page button:not(:disabled):hover {
+  background: linear-gradient(135deg, #4338ca, #5b21b6);
+  transform: translateY(-2px);
+}
+
+/* Success message */
+.cart-page p {
+  margin-top: 15px;
+  font-size: 15px;
+  color: #16a34a;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 480px) {
+  .cart-page {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .cart-page h2 {
+    font-size: 22px;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 12px;
+  }
+
+  .cart-item img {
+    width: 100%;
+    height: 160px;
+    border-radius: 14px;
+  }
+
+  .cart-item div {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+
+  .cart-page h3 {
+    font-size: 18px;
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .cart-page button {
+    font-size: 15px;
+    padding: 12px;
+  }
+}

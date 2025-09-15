@@ -1,0 +1,74 @@
+/* Slider container */
+.announcement-slider {
+  position: relative;
+  width: 100%;
+  padding-top: 70px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 41vh; /* desktop height */
+}
+
+/* Each slide */
+.announcement-slide {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.announcement-slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Image inside slide */
+.announcement-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border: 8px solid white;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+/* Responsive for medium screens */
+@media (max-width: 1268px) {
+  .announcement-slider {
+    height: 35vh;
+  }
+  .announcement-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .announcement-slider {
+    height: 30vh;
+  }
+  .announcement-img {
+    width: 90%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 480px) {
+  .announcement-slider {
+    height: 30vh;
+  }
+  .announcement-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

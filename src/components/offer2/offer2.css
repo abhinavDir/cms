@@ -1,0 +1,73 @@
+/* Container for the offer strip */
+.offer-strip {
+  width: 100%;
+  height: 50px; /* small height for banner */
+  overflow: hidden;
+  position: relative;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-radius: 10px;
+
+}
+
+/* Track that slides */
+.slider-track {
+  display: flex;
+  width: calc(200%); /* double for seamless loop */
+  animation: scroll 10s linear infinite; /* adjust duration for speed */
+}
+
+/* Each slide item */
+.slide-item {
+  flex: 0 0 auto;
+  width: 25%; /* 4 images visible in a row, adjust if needed */
+}
+
+.slide-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slide animation */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); } /* move half the width for loop */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .offer-strip {
+    height: 40px; /* smaller height on mobile */
+    border-radius: 12px; 
+    margin-left: 7px;/* rounded corners on mobile */
+    margin-right: 10px;/* rounded corners on mobile */
+  }
+
+  .slide-item {
+    width: 50%; /* show 2 images at a time on mobile */
+  }
+
+  .slide-item img {
+    border-radius: 1px; 
+    /* rounded corners for images on mobile */
+  }
+}
+@media (max-width: 480px) {
+  .offer-strip {
+    height: 40px; /* smaller height on mobile */
+    /* border-radius: 12px;  */
+    margin-left: 7px;
+  }
+
+  .slide-item {
+    width: 50%; 
+  }
+
+  .slide-item img {
+    border-radius: 1px; 
+    /* rounded corners for images on mobile */
+  }
+}
